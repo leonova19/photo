@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -18,7 +22,7 @@
 
 <body>
 
-
+  <!-- MOBILE TOPBAR -->
   <header class="topbar">
     <button class="menu-btn" id="menuOpen" aria-label="Open menu">☰</button>
 
@@ -32,9 +36,8 @@
   </header>
 
 
-  <div class="overlay" id="overlay"></div>
 
-
+  <!-- MOBILE DRAWER -->
   <aside class="drawer" id="drawer">
     <div class="drawer-head">
       <span class="drawer-title i18n" data-lang="ru">Меню</span>
@@ -63,9 +66,8 @@
     </nav>
   </aside>
 
-
+  <!-- DESKTOP SIDEBAR -->
   <aside class="sidebar desktop-only">
-
     <div class="lang-switcher">
       <button class="lang-btn active" data-set="ru">RU</button>
       <button class="lang-btn" data-set="en">EN</button>
@@ -91,9 +93,7 @@
     </nav>
   </aside>
 
-
   <main class="page">
-
 
     <header class="page-title">
       <h1 class="i18n" data-lang="ru">Услуги</h1>
@@ -102,202 +102,194 @@
 
       <p class="i18n" data-lang="ru">
         Здесь — форматы съёмки и ориентиры по стоимости. Если сомневаетесь, что выбрать — напишите мне, и я помогу
-        подобрать лучший вариант под вашу историю.
+        подобрать лучший вариант.
       </p>
       <p class="i18n" data-lang="en">
         Here are my session formats and starting prices. Not sure what to choose? Message me — I’ll help you pick the
-        best option for your story.
+        best option.
       </p>
       <p class="i18n" data-lang="et">
-        Siin on sessioonide formaadid ja hinnad alates. Kui sa ei tea, mida valida — kirjuta mulle ja aitan leida sinu
-        loole parima variandi.
+        Siin on sessioonide formaadid ja hinnad alates. Kui sa ei tea, mida valida — kirjuta mulle ja aitan valida
+        parima variandi.
       </p>
     </header>
 
-  
-    <section class="section fade-in" id="services">
-    
-
+    <section class="section">
       <div class="services-list">
 
+        <!-- ✅ FIXED CARD -->
         <article class="service-card">
           <img class="service-img" src="img/child.jpg" alt="">
+
           <div class="service-head">
             <h2 class="i18n" data-lang="ru">Фотосессия ребёнка</h2>
             <h2 class="i18n" data-lang="en">Child photoshoot</h2>
             <h2 class="i18n" data-lang="et">Lapse fotosessioon</h2>
-          <div class="service-price i18n" data-lang="ru">90€</div>
-          <div class="service-price i18n" data-lang="en">€90</div>
-          <div class="service-price i18n" data-lang="et">90€</div>
-      </div>
 
-      <p class="service-details i18n" data-lang="ru">30–40 минут · 1 локация · 10 фото в обработке · мягкая съёмка в
-        движении</p>
-      <p class="service-details i18n" data-lang="en">30–40 min · 1 location · 10 edited photos · gentle candid
-        moments</p>
-      <p class="service-details i18n" data-lang="et">30–40 min · 1 asukoht · 10 töödeldud fotot · õrn ja loomulik
-        pildistamine</p>
-      </article>
+            <div class="service-price i18n" data-lang="ru">90€</div>
+            <div class="service-price i18n" data-lang="en">€90</div>
+            <div class="service-price i18n" data-lang="et">90€</div>
+          </div>
 
+          <p class="service-details i18n" data-lang="ru">30–40 минут · 1 локация · 10 фото в обработке · мягкая съёмка в
+            движении</p>
+          <p class="service-details i18n" data-lang="en">30–40 min · 1 location · 10 edited photos · gentle candid
+            moments</p>
+          <p class="service-details i18n" data-lang="et">30–40 min · 1 asukoht · 10 töödeldud fotot · õrn ja loomulik
+            pildistamine</p>
+        </article>
 
-      <article class="service-card">
-        <img class="service-img" src="img/portrait.jpg" alt="">
-        <div class="service-head">
-          <h2 class="i18n" data-lang="ru">Портретная фотосессия</h2>
-          <h2 class="i18n" data-lang="en">Portrait photoshoot</h2>
-          <h2 class="i18n" data-lang="et">Portree fotosessioon</h2>
+        <article class="service-card">
+          <img class="service-img" src="img/portrait.jpg" alt="">
+          <div class="service-head">
+            <h2 class="i18n" data-lang="ru">Портретная фотосессия</h2>
+            <h2 class="i18n" data-lang="en">Portrait photoshoot</h2>
+            <h2 class="i18n" data-lang="et">Portree fotosessioon</h2>
 
-          <div class="service-price i18n" data-lang="ru">160€</div>
-          <div class="service-price i18n" data-lang="en">€160</div>
-          <div class="service-price i18n" data-lang="et">160€</div>
-        </div>
+            <div class="service-price i18n" data-lang="ru">160€</div>
+            <div class="service-price i18n" data-lang="en">€160</div>
+            <div class="service-price i18n" data-lang="et">160€</div>
+          </div>
 
-        <p class="service-details i18n" data-lang="ru">1–1.5 часа · 1–2 локации · 25 фото · помощь с
-          идеей/позированием</p>
-        <p class="service-details i18n" data-lang="en">1–1.5 h · 1–2 locations · 25 photos · concept & posing guidance
-        </p>
-        <p class="service-details i18n" data-lang="et">1–1.5 h · 1–2 asukohta · 25 fotot · aitan idee ja poseerimisega
-        </p>
-      </article>
+          <p class="service-details i18n" data-lang="ru">1–1.5 часа · 1–2 локации · 25 фото · помощь с
+            идеей/позированием</p>
+          <p class="service-details i18n" data-lang="en">1–1.5 h · 1–2 locations · 25 photos · concept & posing guidance
+          </p>
+          <p class="service-details i18n" data-lang="et">1–1.5 h · 1–2 asukohta · 25 fotot · aitan idee ja poseerimisega
+          </p>
+        </article>
 
+        <article class="service-card">
+          <img class="service-img" src="img/regular.jpg" alt="">
+          <div class="service-head">
+            <h2 class="i18n" data-lang="ru">Обычная фотосессия</h2>
+            <h2 class="i18n" data-lang="en">Regular photoshoot</h2>
+            <h2 class="i18n" data-lang="et">Tavaline fotosessioon</h2>
 
-      <article class="service-card">
-        <img class="service-img" src="img/regular.jpg" alt="">
-        <div class="service-head">
-          <h2 class="i18n" data-lang="ru">Обычная фотосессия</h2>
-          <h2 class="i18n" data-lang="en">Regular photoshoot</h2>
-          <h2 class="i18n" data-lang="et">Tavaline fotosessioon</h2>
+            <div class="service-price i18n" data-lang="ru">240€</div>
+            <div class="service-price i18n" data-lang="en">€240</div>
+            <div class="service-price i18n" data-lang="et">240€</div>
+          </div>
 
-          <div class="service-price i18n" data-lang="ru">240€</div>
-          <div class="service-price i18n" data-lang="en">€240</div>
-          <div class="service-price i18n" data-lang="et">240€</div>
-        </div>
+          <p class="service-details i18n" data-lang="ru">2 часа · несколько образов · 45 фото · спокойный темп и больше
+            разнообразия</p>
+          <p class="service-details i18n" data-lang="en">2 h · multiple looks · 45 photos · calm pace & more variety</p>
+          <p class="service-details i18n" data-lang="et">2 h · mitu stiili · 45 fotot · rahulik tempo ja rohkem
+            varieeruvust</p>
+        </article>
 
-        <p class="service-details i18n" data-lang="ru">2 часа · несколько образов · 45 фото · спокойный темп и больше
-          разнообразия</p>
-        <p class="service-details i18n" data-lang="en">2 h · multiple looks · 45 photos · calm pace & more variety</p>
-        <p class="service-details i18n" data-lang="et">2 h · mitu stiili · 45 fotot · rahulik tempo ja rohkem
-          varieeruvust</p>
-      </article>
+        <article class="service-card">
+          <img class="service-img" src="img/friends.jpg" alt="">
+          <div class="service-head">
+            <h2 class="i18n" data-lang="ru">Дружеская</h2>
+            <h2 class="i18n" data-lang="en">Friends</h2>
+            <h2 class="i18n" data-lang="et">Sõbrad</h2>
 
+            <div class="service-price i18n" data-lang="ru">140€</div>
+            <div class="service-price i18n" data-lang="en">€140</div>
+            <div class="service-price i18n" data-lang="et">140€</div>
+          </div>
 
-      <article class="service-card">
-        <img class="service-img" src="img/friends.jpg" alt="">
-        <div class="service-head">
-          <h2 class="i18n" data-lang="ru">Дружеская</h2>
-          <h2 class="i18n" data-lang="en">Friends</h2>
-          <h2 class="i18n" data-lang="et">Sõbrad</h2>
+          <p class="service-details i18n" data-lang="ru">1–1.5 часа · 1 локация · 30 фото · живые эмоции и движение</p>
+          <p class="service-details i18n" data-lang="en">1–1.5 h · 1 location · 30 photos · candid moments & movement
+          </p>
+          <p class="service-details i18n" data-lang="et">1–1.5 h · 1 asukoht · 30 fotot · loomulikud hetked</p>
+        </article>
 
-          <div class="service-price i18n" data-lang="ru">140€</div>
-          <div class="service-price i18n" data-lang="en">€140</div>
-          <div class="service-price i18n" data-lang="et">140€</div>
-        </div>
+        <article class="service-card">
+          <img class="service-img" src="img/holiday.jpg" alt="">
+          <div class="service-head">
+            <h2 class="i18n" data-lang="ru">Праздничная</h2>
+            <h2 class="i18n" data-lang="en">Holiday</h2>
+            <h2 class="i18n" data-lang="et">Pühad</h2>
 
-        <p class="service-details i18n" data-lang="ru">1–1.5 часа · 1 локация · 30 фото · живые эмоции и движение</p>
-        <p class="service-details i18n" data-lang="en">1–1.5 h · 1 location · 30 photos · candid moments & movement
-        </p>
-        <p class="service-details i18n" data-lang="et">1–1.5 h · 1 asukoht · 30 fotot · loomulikud hetked</p>
-      </article>
+            <div class="service-price i18n" data-lang="ru">170€</div>
+            <div class="service-price i18n" data-lang="en">€170</div>
+            <div class="service-price i18n" data-lang="et">170€</div>
+          </div>
 
+          <p class="service-details i18n" data-lang="ru">до 2 часов · атмосфера праздника · 35 фото · можно дома/в
+            ресторане/на улице</p>
+          <p class="service-details i18n" data-lang="en">up to 2 h · celebration mood · 35 photos ·
+            home/restaurant/outdoors</p>
+          <p class="service-details i18n" data-lang="et">kuni 2 h · pidulik meeleolu · 35 fotot · kodus/restoranis/õues
+          </p>
+        </article>
 
-      <article class="service-card">
-        <img class="service-img" src="img/holiday.jpg" alt="">
-        <div class="service-head">
-          <h2 class="i18n" data-lang="ru">Праздничная</h2>
-          <h2 class="i18n" data-lang="en">Holiday</h2>
-          <h2 class="i18n" data-lang="et">Pühad</h2>
+        <article class="service-card">
+          <img class="service-img" src="img/wedding.jpg" alt="">
+          <div class="service-head">
+            <h2 class="i18n" data-lang="ru">Свадьба</h2>
+            <h2 class="i18n" data-lang="en">Wedding</h2>
+            <h2 class="i18n" data-lang="et">Pulmad</h2>
 
-          <div class="service-price i18n" data-lang="ru">170€</div>
-          <div class="service-price i18n" data-lang="en">€170</div>
-          <div class="service-price i18n" data-lang="et">170€</div>
-        </div>
+            <div class="service-price i18n" data-lang="ru">от 750€</div>
+            <div class="service-price i18n" data-lang="en">from €750</div>
+            <div class="service-price i18n" data-lang="et">alates 750€</div>
+          </div>
 
-        <p class="service-details i18n" data-lang="ru">до 2 часов · атмосфера праздника · 35 фото · можно дома/в
-          ресторане/на улице</p>
-        <p class="service-details i18n" data-lang="en">up to 2 h · celebration mood · 35 photos ·
-          home/restaurant/outdoors</p>
-        <p class="service-details i18n" data-lang="et">kuni 2 h · pidulik meeleolu · 35 fotot · kodus/restoranis/õues
-        </p>
-      </article>
+          <p class="service-details i18n" data-lang="ru">индивидуально · от церемонии до прогулки · тайминг/объём
+            обсуждаем</p>
+          <p class="service-details i18n" data-lang="en">custom · ceremony + couple shoot · timing & coverage discussed
+          </p>
+          <p class="service-details i18n" data-lang="et">kokkuleppel · tseremoonia + jalutuskäik · maht ja ajakava
+            arutame</p>
+        </article>
 
+        <article class="service-card">
+          <img class="service-img" src="img/couple.jpg" alt="">
+          <div class="service-head">
+            <h2 class="i18n" data-lang="ru">Love Story</h2>
+            <h2 class="i18n" data-lang="en">Love story</h2>
+            <h2 class="i18n" data-lang="et">Love story</h2>
 
-      <article class="service-card">
-        <img class="service-img" src="img/wedding.jpg" alt="">
-        <div class="service-head">
-          <h2 class="i18n" data-lang="ru">Свадьба</h2>
-          <h2 class="i18n" data-lang="en">Wedding</h2>
-          <h2 class="i18n" data-lang="et">Pulmad</h2>
+            <div class="service-price i18n" data-lang="ru">190€</div>
+            <div class="service-price i18n" data-lang="en">€190</div>
+            <div class="service-price i18n" data-lang="et">190€</div>
+          </div>
 
-          <div class="service-price i18n" data-lang="ru">от 750€</div>
-          <div class="service-price i18n" data-lang="en">from €750</div>
-          <div class="service-price i18n" data-lang="et">alates 750€</div>
-        </div>
+          <p class="service-details i18n" data-lang="ru">1–2 часа · 1–2 локации · 30 фото · мягкая романтичная атмосфера
+          </p>
+          <p class="service-details i18n" data-lang="en">1–2 h · 1–2 locations · 30 photos · soft romantic mood</p>
+          <p class="service-details i18n" data-lang="et">1–2 h · 1–2 asukohta · 30 fotot · õrn romantiline meeleolu</p>
+        </article>
 
-        <p class="service-details i18n" data-lang="ru">индивидуально · от церемонии до прогулки · тайминг/объём
-          обсуждаем</p>
-        <p class="service-details i18n" data-lang="en">custom · ceremony + couple shoot · timing & coverage discussed
-        </p>
-        <p class="service-details i18n" data-lang="et">kokkuleppel · tseremoonia + jalutuskäik · maht ja ajakava
-          arutame</p>
-      </article>
+        <article class="service-card">
+          <img class="service-img" src="img/family.jpg" alt="">
+          <div class="service-head">
+            <h2 class="i18n" data-lang="ru">Семейная</h2>
+            <h2 class="i18n" data-lang="en">Family</h2>
+            <h2 class="i18n" data-lang="et">Pere</h2>
 
-  
-      <article class="service-card">
-        <img class="service-img" src="img/couple.jpg" alt="">
-        <div class="service-head">
-          <h2 class="i18n" data-lang="ru">Love Story</h2>
-          <h2 class="i18n" data-lang="en">Love story</h2>
-          <h2 class="i18n" data-lang="et">Love story</h2>
+            <div class="service-price i18n" data-lang="ru">200€</div>
+            <div class="service-price i18n" data-lang="en">€200</div>
+            <div class="service-price i18n" data-lang="et">200€</div>
+          </div>
 
-          <div class="service-price i18n" data-lang="ru">190€</div>
-          <div class="service-price i18n" data-lang="en">€190</div>
-          <div class="service-price i18n" data-lang="et">190€</div>
-        </div>
+          <p class="service-details i18n" data-lang="ru">1–2 часа · 1 локация · 35 фото · живые кадры и эмоции</p>
+          <p class="service-details i18n" data-lang="en">1–2 h · 1 location · 35 photos · natural emotions</p>
+          <p class="service-details i18n" data-lang="et">1–2 h · 1 asukoht · 35 fotot · loomulikud emotsioonid</p>
+        </article>
 
-        <p class="service-details i18n" data-lang="ru">1–2 часа · 1–2 локации · 30 фото · мягкая романтичная атмосфера
-        </p>
-        <p class="service-details i18n" data-lang="en">1–2 h · 1–2 locations · 30 photos · soft romantic mood</p>
-        <p class="service-details i18n" data-lang="et">1–2 h · 1–2 asukohta · 30 fotot · õrn romantiline meeleolu</p>
-      </article>
+        <article class="service-card">
+          <img class="service-img" src="img/brand.jpg" alt="">
+          <div class="service-head">
+            <h2 class="i18n" data-lang="ru">Контент для бренда</h2>
+            <h2 class="i18n" data-lang="en">Brand content</h2>
+            <h2 class="i18n" data-lang="et">Brändi sisu</h2>
 
+            <div class="service-price i18n" data-lang="ru">от 250€</div>
+            <div class="service-price i18n" data-lang="en">from €250</div>
+            <div class="service-price i18n" data-lang="et">alates 250€</div>
+          </div>
 
-      <article class="service-card">
-        <img class="service-img" src="img/family.jpg" alt="">
-        <div class="service-head">
-          <h2 class="i18n" data-lang="ru">Семейная</h2>
-          <h2 class="i18n" data-lang="en">Family</h2>
-          <h2 class="i18n" data-lang="et">Pere</h2>
-
-          <div class="service-price i18n" data-lang="ru">200€</div>
-          <div class="service-price i18n" data-lang="en">€200</div>
-          <div class="service-price i18n" data-lang="et">200€</div>
-        </div>
-
-        <p class="service-details i18n" data-lang="ru">1–2 часа · 1 локация · 35 фото · живые кадры и эмоции</p>
-        <p class="service-details i18n" data-lang="en">1–2 h · 1 location · 35 photos · natural emotions</p>
-        <p class="service-details i18n" data-lang="et">1–2 h · 1 asukoht · 35 fotot · loomulikud emotsioonid</p>
-      </article>
-
-
-      <article class="service-card">
-        <img class="service-img" src="img/brand.jpg" alt="">
-        <div class="service-head">
-          <h2 class="i18n" data-lang="ru">Контент для бренда</h2>
-          <h2 class="i18n" data-lang="en">Brand content</h2>
-          <h2 class="i18n" data-lang="et">Brändi sisu</h2>
-
-          <div class="service-price i18n" data-lang="ru">от 250€</div>
-          <div class="service-price i18n" data-lang="en">from €250</div>
-          <div class="service-price i18n" data-lang="et">alates 250€</div>
-        </div>
-
-        <p class="service-details i18n" data-lang="ru">для Instagram/сайта · moodboard · сроки/объём обсуждаем ·
-          возможна регулярная съёмка</p>
-        <p class="service-details i18n" data-lang="en">for Instagram/website · moodboard · timing/volume discussed ·
-          retainer possible</p>
-        <p class="service-details i18n" data-lang="et">Instagrami/veebi jaoks · moodboard · maht/tähtaeg kokkuleppel ·
-          püsikoostöö</p>
-      </article>
+          <p class="service-details i18n" data-lang="ru">для Instagram/сайта · moodboard · сроки/объём обсуждаем ·
+            возможна регулярная съёмка</p>
+          <p class="service-details i18n" data-lang="en">for Instagram/website · moodboard · timing/volume discussed ·
+            retainer possible</p>
+          <p class="service-details i18n" data-lang="et">Instagrami/veebi jaoks · moodboard · maht/tähtaeg kokkuleppel ·
+            püsikoostöö</p>
+        </article>
 
       </div>
     </section>
@@ -350,7 +342,6 @@
       </div>
     </section>
 
-   
     <section class="section cta-section fade-in">
       <div class="cta-card">
         <h2 class="name i18n" data-lang="ru">Хочу съёмку</h2>
@@ -367,7 +358,6 @@
       </div>
     </section>
 
-
     <footer class="site-footer">
       <div class="container footer-inner">
         <span class="i18n" data-lang="ru">© 2025 · Lisa Photography</span>
@@ -378,80 +368,7 @@
 
   </main>
 
- 
-  <script>
-    (function () {
-      function setLanguage(lang) {
-        document.querySelectorAll(".i18n").forEach(el => {
-          el.style.display = (el.dataset.lang === lang) ? "" : "none";
-        });
-
-        document.querySelectorAll(".lang-btn").forEach(btn => {
-          btn.classList.toggle("active", btn.dataset.set === lang);
-        });
-
-        document.documentElement.lang = lang;
-        localStorage.setItem("lang", lang);
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const saved = localStorage.getItem("lang") || "ru";
-        setLanguage(saved);
-
-        document.querySelectorAll(".lang-btn").forEach(btn => {
-          btn.addEventListener("click", () => setLanguage(btn.dataset.set));
-        });
-      });
-    })();
-  </script>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const drawer = document.getElementById("drawer");
-    const overlay = document.getElementById("overlay");
-    const openBtn = document.getElementById("menuOpen");
-    const closeBtn = document.getElementById("menuClose");
-
-    function openMenu() {
-      drawer.classList.add("open");
-      overlay.classList.add("open");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeMenu() {
-      drawer.classList.remove("open");
-      overlay.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-
-    openBtn?.addEventListener("click", openMenu);
-    closeBtn?.addEventListener("click", closeMenu);
-    overlay?.addEventListener("click", closeMenu);
-
-
-    document.querySelectorAll(".drawer-nav a").forEach(a => {
-      a.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-  });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      }, { threshold: 0.2 });
-
-      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>

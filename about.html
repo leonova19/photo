@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -25,7 +29,6 @@
       </div>
     </div>
   </header>
-
 
   <div class="overlay" id="overlay"></div>
 
@@ -57,9 +60,7 @@
     </nav>
   </aside>
 
-
   <aside class="sidebar desktop-only">
-
     <div class="lang-switcher">
       <button class="lang-btn active" data-set="ru">RU</button>
       <button class="lang-btn" data-set="en">EN</button>
@@ -85,7 +86,6 @@
     </nav>
   </aside>
 
-
   <main class="page">
 
     <header class="page-title">
@@ -104,11 +104,8 @@
       </p>
     </header>
 
-
     <section class="section fade-in">
       <div class="services-list" style="margin-top:0;">
-
-
         <article class="service-card">
           <img class="about-img" src="img/about.jpg" alt="">
           <div class="service-head">
@@ -144,7 +141,7 @@
           </p>
           <p class="service-details i18n" data-lang="en">
             Before the shoot we discuss the idea and mood, pick a location and outfits.
-            During the session I guide you with posing, hands, взгляд and movement — even if it’s your first time.
+            During the session I guide you with posing and movement — even if it’s your first time.
           </p>
           <p class="service-details i18n" data-lang="et">
             Enne sessiooni arutame ideed ja meeleolu, valime asukoha ja riietuse.
@@ -168,7 +165,7 @@
               <strong class="i18n" data-lang="et">Juhendamine</strong>
 
               <span class="i18n" data-lang="ru">позирование · движение · эмоции</span>
-              <span class="i18n" data-lang="en">posing · movement · эмоции</span>
+              <span class="i18n" data-lang="en">posing · movement · emotions</span>
               <span class="i18n" data-lang="et">poseerimine · liikumine · emotsioonid</span>
             </div>
 
@@ -183,10 +180,8 @@
             </div>
           </div>
         </article>
-
       </div>
     </section>
-
 
     <section class="section fade-in" id="contacts">
       <h2 class="section-title i18n" data-lang="ru">Мои контакты</h2>
@@ -230,7 +225,6 @@
       </div>
     </section>
 
-
     <footer class="site-footer">
       <div class="container footer-inner">
         <span class="i18n" data-lang="ru">© 2025 · Lisa Photography</span>
@@ -241,78 +235,6 @@
 
   </main>
 
- 
-  <script>
-    (function () {
-      function setLanguage(lang) {
-        document.querySelectorAll(".i18n").forEach(el => {
-          el.style.display = (el.dataset.lang === lang) ? "" : "none";
-        });
-
-        document.querySelectorAll(".lang-btn").forEach(btn => {
-          btn.classList.toggle("active", btn.dataset.set === lang);
-        });
-
-        document.documentElement.lang = lang;
-        localStorage.setItem("lang", lang);
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const saved = localStorage.getItem("lang") || "ru";
-        setLanguage(saved);
-
-        document.querySelectorAll(".lang-btn").forEach(btn => {
-          btn.addEventListener("click", () => setLanguage(btn.dataset.set));
-        });
-      });
-    })();
-  </script>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const drawer = document.getElementById("drawer");
-    const overlay = document.getElementById("overlay");
-    const openBtn = document.getElementById("menuOpen");
-    const closeBtn = document.getElementById("menuClose");
-
-    function openMenu() {
-      drawer.classList.add("open");
-      overlay.classList.add("open");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeMenu() {
-      drawer.classList.remove("open");
-      overlay.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-
-    openBtn?.addEventListener("click", openMenu);
-    closeBtn?.addEventListener("click", closeMenu);
-    overlay?.addEventListener("click", closeMenu);
-
-    document.querySelectorAll(".drawer-nav a").forEach(a => {
-      a.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-  });
-  </script>
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      }, { threshold: 0.2 });
-
-      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>

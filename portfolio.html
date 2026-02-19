@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -13,7 +17,6 @@
 </head>
 
 <body>
-
 
   <header class="topbar">
     <button class="menu-btn" id="menuOpen" aria-label="Open menu">☰</button>
@@ -27,9 +30,7 @@
     </div>
   </header>
 
-
   <div class="overlay" id="overlay"></div>
-
 
   <aside class="drawer" id="drawer">
     <div class="drawer-head">
@@ -59,9 +60,7 @@
     </nav>
   </aside>
 
-
   <aside class="sidebar desktop-only">
-
     <div class="lang-switcher">
       <button class="lang-btn active" data-set="ru">RU</button>
       <button class="lang-btn" data-set="en">EN</button>
@@ -89,22 +88,14 @@
 
   <main class="page">
 
-
     <header class="page-title">
       <h1 class="i18n" data-lang="ru">Портфолио</h1>
       <h1 class="i18n" data-lang="en">Portfolio</h1>
       <h1 class="i18n" data-lang="et">Portfoolio</h1>
 
-      <p class="i18n" data-lang="ru">
-        Подборка моих любимых кадров. Здесь — портреты, пары, семейные и атмосферные истории.
-      </p>
-      <p class="i18n" data-lang="en">
-        A selection of my favorite frames: portraits, couples, family and atmospheric stories.
-      </p>
-      <p class="i18n" data-lang="et">
-        Valik minu lemmikkaadreid: portreed, paarid, pere ja atmosfäärsed lood.
-      </p>
-
+      <p class="i18n" data-lang="ru">Подборка моих любимых кадров. Здесь — портреты, пары, семейные и атмосферные истории.</p>
+      <p class="i18n" data-lang="en">A selection of my favorite frames: portraits, couples, family and atmospheric stories.</p>
+      <p class="i18n" data-lang="et">Valik minu lemmikkaadreid: portreed, paarid, pere ja atmosfäärsed lood.</p>
 
       <div class="portfolio-filters">
         <button class="filter-btn active" data-filter="portrait">
@@ -139,46 +130,35 @@
       </div>
     </header>
 
+    <section class="section fade-in" style="padding-top: 45px;">
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item" data-cat="portrait"><img src="img/portrait.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="portrait"><img src="img/portrait1.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="portrait"><img src="img/portrait2.jpg" alt=""></div>
 
+        <div class="portfolio-item" data-cat="couple"><img src="img/photo4.png" alt=""></div>
+        <div class="portfolio-item" data-cat="couple"><img src="img/couple.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="couple"><img src="img/couple1.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="couple"><img src="img/couple5.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="couple"><img src="img/couple6.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="couple"><img src="img/couple7.jpg" alt=""></div>
 
-<section class="section fade-in" style="padding-top: 45px;">
-  <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item" data-cat="family"><img src="img/fam.png" alt=""></div>
+        <div class="portfolio-item" data-cat="family"><img src="img/family1.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="family"><img src="img/family2.jpg" alt=""></div>
 
+        <div class="portfolio-item" data-cat="kids"><img src="img/child.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="kids"><img src="img/child1.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="kids"><img src="img/child2.jpg" alt=""></div>
 
-    <div class="portfolio-item" data-cat="portrait"><img src="img/portrait.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="portrait"><img src="img/portrait1.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="portrait"><img src="img/portrait2.jpg" alt=""></div>
-
-
-
-    <div class="portfolio-item" data-cat="couple"><img src="img/photo4.png" alt=""></div>
-    <div class="portfolio-item" data-cat="couple"><img src="img/couple.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="couple"><img src="img/couple1.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="couple"><img src="img/couple5.jpg"alt=""></div>
-    <div class="portfolio-item" data-cat="couple"><img src="img/couple6.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="couple"><img src="img/couple7.jpg" alt=""></div>
-
-
-    <div class="portfolio-item" data-cat="family"><img src="img/fam.png" alt=""></div>
-    <div class="portfolio-item" data-cat="family"><img src="img/family1.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="family"><img src="img/family2.jpg" alt=""></div>
- 
-
-    <div class="portfolio-item" data-cat="kids"><img src="img/child.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="kids"><img src="img/child1.jpg"alt=""></div>
-    <div class="portfolio-item" data-cat="kids"><img src="img/child2.jpg" alt=""></div>
-
-
-    <div class="portfolio-item" data-cat="wedding"><img src="img/wedding.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="wedding"><img src="img/wedding1.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="wedding"><img src="img/wedding2.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="wedding"><img src="img/wedding3.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="wedding"><img src="img/wedding4.jpg" alt=""></div>
-    <div class="portfolio-item" data-cat="wedding"><img src="img/wedding5.jpg" alt=""></div>
-
-  </div>
-</section>
-
+        <div class="portfolio-item" data-cat="wedding"><img src="img/wedding.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="wedding"><img src="img/wedding1.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="wedding"><img src="img/wedding2.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="wedding"><img src="img/wedding3.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="wedding"><img src="img/wedding4.jpg" alt=""></div>
+        <div class="portfolio-item" data-cat="wedding"><img src="img/wedding5.jpg" alt=""></div>
+      </div>
+    </section>
 
     <section class="section cta-section fade-in">
       <div class="cta-card">
@@ -196,7 +176,6 @@
       </div>
     </section>
 
-  
     <footer class="site-footer">
       <div class="container footer-inner">
         <span class="i18n" data-lang="ru">© 2025 · Lisa Photography</span>
@@ -207,106 +186,6 @@
 
   </main>
 
-
-
-
-  <script>
-    (function () {
-      function setLanguage(lang) {
-        document.querySelectorAll(".i18n").forEach(el => {
-          el.style.display = (el.dataset.lang === lang) ? "" : "none";
-        });
-
-        document.querySelectorAll(".lang-btn").forEach(btn => {
-          btn.classList.toggle("active", btn.dataset.set === lang);
-        });
-
-        document.documentElement.lang = lang;
-        localStorage.setItem("lang", lang);
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const saved = localStorage.getItem("lang") || "ru";
-        setLanguage(saved);
-
-        document.querySelectorAll(".lang-btn").forEach(btn => {
-          btn.addEventListener("click", () => setLanguage(btn.dataset.set));
-        });
-      });
-    })();
-  </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const btns = document.querySelectorAll(".filter-btn");
-    const items = document.querySelectorAll(".portfolio-item");
-
-    btns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        btns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const f = btn.dataset.filter;
-        items.forEach(item => {
-          const cat = item.dataset.cat;
-          item.style.display = (f === "all" || cat === f) ? "" : "none";
-        });
-      });
-    });
-
-
-    const start = document.querySelector(".filter-btn.active")?.dataset.filter || "portrait";
-    items.forEach(item => item.style.display = (item.dataset.cat === start) ? "" : "none");
-  });
-</script>
-   
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const drawer = document.getElementById("drawer");
-    const overlay = document.getElementById("overlay");
-    const openBtn = document.getElementById("menuOpen");
-    const closeBtn = document.getElementById("menuClose");
-
-    function openMenu() {
-      drawer.classList.add("open");
-      overlay.classList.add("open");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeMenu() {
-      drawer.classList.remove("open");
-      overlay.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-
-    openBtn?.addEventListener("click", openMenu);
-    closeBtn?.addEventListener("click", closeMenu);
-    overlay?.addEventListener("click", closeMenu);
-
-    
-    document.querySelectorAll(".drawer-nav a").forEach(a => {
-      a.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-  });
-  </script>
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      }, { threshold: 0.2 });
-
-      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>

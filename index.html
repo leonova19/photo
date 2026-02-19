@@ -2,9 +2,13 @@
 <html lang="ru" data-lang="loading">
 <head>
   <meta charset="UTF-8" />
-  <title>Maria Lin — Photographer</title>
+  <title>Lisa — Photographer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +18,7 @@
 
 <body>
 
-
+  <!-- MOBILE TOPBAR -->
   <header class="topbar">
     <button class="menu-btn" id="menuOpen" aria-label="Open menu">☰</button>
 
@@ -27,10 +31,9 @@
     </div>
   </header>
 
-
   <div class="overlay" id="overlay"></div>
 
-
+  <!-- MOBILE DRAWER -->
   <aside class="drawer" id="drawer">
     <div class="drawer-head">
       <span class="drawer-title i18n" data-lang="ru">Меню</span>
@@ -59,8 +62,8 @@
     </nav>
   </aside>
 
+  <!-- DESKTOP SIDEBAR -->
   <aside class="sidebar desktop-only">
-
     <div class="lang-switcher">
       <button class="lang-btn active" data-set="ru">RU</button>
       <button class="lang-btn" data-set="en">EN</button>
@@ -86,7 +89,6 @@
     </nav>
   </aside>
 
-  
   <main class="page">
 
     <section class="hero" id="hero">
@@ -119,7 +121,6 @@
       </div>
     </section>
 
-    
     <section class="section gallery-section fade-in" id="gallery">
       <h2 class="section-title i18n" data-lang="ru">Кадры, которые говорят сами за себя</h2>
       <h2 class="section-title i18n" data-lang="en">Frames that speak for themselves</h2>
@@ -135,7 +136,6 @@
       </div>
     </section>
 
-
     <section class="section story-section fade-in" id="story">
       <h2 class="section-title i18n" data-lang="ru">О фотосессии</h2>
       <h2 class="section-title i18n" data-lang="en">About the photoshoot</h2>
@@ -145,21 +145,21 @@
         Фотосессия — это не только красивые кадры. Это пространство, где можно прожить момент, позволить себе быть настоящей и увидеть себя по-новому.
       </p>
       <p class="i18n" data-lang="ru">
-        И каждое фото становится частичкой вашей истории — памятью, которая остаётся с вами навсегда, напоминая о чувствах, состоянии и силе, которую вы однажды позволили себе прожить.
+        И каждое фото становится частичкой вашей истории — памятью, которая остаётся с вами навсегда, напоминая о чувствах, состоянии и силе.
       </p>
 
       <p class="i18n" data-lang="en">
-        A photoshoot is more than beautiful images. It is a space where you can slow down, live the moment, allow yourself to be real, and see yourself in a new way.
+        A photoshoot is more than beautiful images. It is a space where you can slow down, live the moment, and see yourself in a new way.
       </p>
       <p class="i18n" data-lang="en">
-        Every photograph becomes a fragment of your story — a memory that stays with you, reminding you of the feelings, the state, and the strength you once allowed yourself to experience.
+        Every photograph becomes a fragment of your story — a memory that stays with you.
       </p>
 
       <p class="i18n" data-lang="et">
-        Fotosessioon ei ole ainult ilusad pildid. See on ruum, kus saab hetke päriselt kogeda, olla ehe ja näha end uue pilguga.
+        Fotosessioon ei ole ainult ilusad pildid. See on ruum, kus saab hetke päriselt kogeda ja näha end uue pilguga.
       </p>
       <p class="i18n" data-lang="et">
-        Iga foto muutub osaks sinu loost — mälestuseks, mis jääb sinuga ja meenutab tundeid, seisundit ja jõudu, mida sa endale kord lubasid kogeda.
+        Iga foto muutub osaks sinu loost — mälestuseks, mis jääb sinuga.
       </p>
     </section>
 
@@ -175,7 +175,6 @@
       </div>
     </section>
 
-
     <footer class="site-footer">
       <div class="container footer-inner">
         <span class="i18n" data-lang="ru">© 2025 · Lisa Photography</span>
@@ -186,83 +185,6 @@
 
   </main>
 
-
-  <script>
-  (function () {
-    function setLanguage(lang) {
-      document.querySelectorAll(".i18n").forEach(el => {
-        el.style.display = (el.dataset.lang === lang) ? "" : "none";
-      });
-
-      document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.set === lang);
-      });
-
-      document.documentElement.lang = lang;
-      document.documentElement.dataset.lang = "ready";
-      localStorage.setItem("lang", lang);
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const saved = localStorage.getItem("lang") || "ru";
-      setLanguage(saved);
-
-      document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.addEventListener("click", () => setLanguage(btn.dataset.set));
-      });
-    });
-  })();
-  </script>
-
-
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const drawer = document.getElementById("drawer");
-    const overlay = document.getElementById("overlay");
-    const openBtn = document.getElementById("menuOpen");
-    const closeBtn = document.getElementById("menuClose");
-
-    function openMenu() {
-      drawer.classList.add("open");
-      overlay.classList.add("open");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeMenu() {
-      drawer.classList.remove("open");
-      overlay.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-
-    openBtn?.addEventListener("click", openMenu);
-    closeBtn?.addEventListener("click", closeMenu);
-    overlay?.addEventListener("click", closeMenu);
-
-
-    document.querySelectorAll(".drawer-nav a").forEach(a => {
-      a.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-  });
-  </script>
-
-
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".fade-in");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
-      });
-    }, { threshold: 0.2 });
-
-    elements.forEach(el => observer.observe(el));
-  });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
